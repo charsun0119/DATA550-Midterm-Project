@@ -1,0 +1,15 @@
+---
+title: "DATA550 Midterm Group 4"
+output: html_document
+author: "Annabel Nicholas, Katherine Cho, Kirsten Reid, Shreya Shankar, Yijing Sun"
+date: "2025-11-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Group 4
+
+This is just a sample R markdown file for our final report. 
+
