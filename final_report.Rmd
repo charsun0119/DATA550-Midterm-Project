@@ -9,7 +9,25 @@ date: "2025-11-05"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, load-data}
+# Loading in the dataset based on Katie's changes (i.e., 00_dataset_rds.R)
+here::i_am("final_report.Rmd")
+data <- readRDS(
+  file = here::here("data/covid_data.rds")
+)
+```
+
 ## Group 4
 
 This is just a sample R markdown file for our final report. 
 
+
+## Descriptive Statistics Table
+
+```{r, table1, echo = FALSE, results = 'asis', include = TRUE}
+# Printing the Descriptive Statistics table created by Katie (i.e., 01_descriptive_stats.R)
+tab_1 <- readRDS(
+  file = here::here("output/table_one.rds")
+  )
+tab_1
+```
