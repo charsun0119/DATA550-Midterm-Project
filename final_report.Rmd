@@ -19,8 +19,6 @@ data <- readRDS(
 
 ## Group 4
 
-This is just a sample R markdown file for our final report. 
-
 
 ## Descriptive Statistics Table
 
@@ -31,3 +29,16 @@ tab_1 <- readRDS(
   )
 tab_1
 ```
+
+## Regression Analysis
+
+```{r, regression, echo = FALSE, results = 'asis', include = TRUE}
+tab_2 <- readRDS(
+  file = here::here("output/regression_table.rds")
+  )
+tab_2
+```
+
+
+
+
