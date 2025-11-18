@@ -1,5 +1,6 @@
 # DATA550 Midterm Project - Group 4 
 Katherine Cho, Shreya Shankar, Kirsten Reid, Annie Nicholas, Yijing Sun
+
 Dataset: COVID-19 (information regarding covid-19 cases in Mexico) 
 
 ### Description
