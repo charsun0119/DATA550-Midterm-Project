@@ -10,7 +10,7 @@ The data was provided by the Mexican government regarding covid-19 cases in Mexi
 - Code: All codes that are used to generate tables, figures, and analysis
 - Output: The outputs of the codes
 - Data: Original dataset, both in .csv and .rds
-- The final report (final_report.rmd), Makefile, and .gitignore can be found in the main directory. The current final_report.rmd is a draft of our final table, which contains sections that are to be done. 
+- The final report (final_report.rmd), Makefile, and .gitignore can be found in the main directory. The current final_report.rmd is a draft of our final report and contains sections that are to be done. 
 
 ### Building the Project
 This project uses a Makefile to ensure that all analyses and outputs can be reproduced. To build the entire project (including tables, regression outputs, and the final report), run "make" in R terminal; to remove previously generated files, run "make clean".
