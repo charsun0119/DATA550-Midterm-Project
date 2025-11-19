@@ -4,13 +4,13 @@ Katherine Cho, Shreya Shankar, Kirsten Reid, Annie Nicholas, Yijing Sun
 Dataset: COVID-19 (information regarding covid-19 cases in Mexico) 
 
 ### Description
-The data is from a randomized trial testing whether a modified milk formula (f75) improves outcomes for children with severe acute malnutrition (first 6-months of data from year-long study). This purpose of this project is to produce reproducible analysis of the dataset. 
+The data was provided by the Mexican government regarding covid-19 cases in Mexico, and the dataset of this project is 20% of the full dataset. This purpose of this project is to produce reproducible analysis of the dataset. 
 
 ### Directory Structure
 - Code: All codes that are used to generate tables, figures, and analysis
 - Output: The outputs of the codes
 - Data: Original dataset, both in .csv and .rds
-- The final report (final_report.rmd), Makefile, and .gitignore can be found in the main directory.
+- The final report (final_report.rmd), Makefile, and .gitignore can be found in the main directory. The current final_report.rmd is a draft of our final table, which contains sections that are to be done. 
 
 ### Building the Project
 This project uses a Makefile to ensure that all analyses and outputs can be reproduced. To build the entire project (including tables, regression outputs, and the final report), run "make" in R terminal; to remove previously generated files, run "make clean".
