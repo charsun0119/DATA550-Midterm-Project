@@ -39,6 +39,24 @@ tab_2 <- readRDS(
 tab_2
 ```
 
+### Graphs
 
+```{r, graph, echo = FALSE, results = 'asis', include = TRUE}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output", "bar_graph.png")
+)
+
+```
+
+```{r, graph2, echo = FALSE, results = 'asis', include = TRUE}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output", "scatterplot.png")
+)
+
+```
 
 

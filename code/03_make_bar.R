@@ -1,4 +1,4 @@
-here::i_am("code/make_bar.R")
+here::i_am("code/03_make_bar.R")
 
 data <- readRDS(
   file = here::here("data/covid_data.rds"))
