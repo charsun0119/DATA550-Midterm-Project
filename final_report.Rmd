@@ -5,11 +5,14 @@ author: "Annabel Nicholas, Katherine Cho, Kirsten Reid, Shreya Shankar, Yijing S
 date: "2025-11-05"
 ---
 
-```{r setup, include=FALSE}
+
+```{r, setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(knitr)
 ```
 
-```{r, load-data}
+```{r, load-data, include=FALSE}
 # Loading in the dataset based on Katie's changes (i.e., 00_dataset_rds.R)
 here::i_am("final_report.Rmd")
 data <- readRDS(
@@ -19,8 +22,10 @@ data <- readRDS(
 
 ## Group 4
 
+In this report, we examine the relationship between diabetes and in-hospital death among adults with COVID-19 using a large observational dataset (N = 209,061). We begin with descriptive, bivariate comparisons of patients with and without diabetes across key demographic and clinical characteristics, then fit a multivariable logistic regression model to estimate adjusted associations between diabetes and mortality while controlling for age, sex, and COVID-19 severity classification. The tables are complemented by graphical summaries that visualize how risk factors and outcomes vary across subgroups, reinforcing the main patterns seen in the descriptive and regression results.
 
 ## Descriptive Statistics Table
+
 
 ```{r, table1, echo = FALSE, results = 'asis', include = TRUE}
 # Printing the Descriptive Statistics table created by Katie (i.e., 01_descriptive_stats.R)
@@ -30,6 +35,8 @@ tab_1 <- readRDS(
 tab_1
 ```
 
+Table 1 compares patients without diabetes (N = 184,188) to those with diabetes (N = 24,873) across demographic and clinical covariates. Patients with diabetes are substantially older— with median age 57 years versus 38 years in the non-diabetes group— and have a markedly higher prevalence of hypertension (53% vs. 11%), chronic renal disease (7.9% vs. 1.0%), and cardiovascular disease (6.2% vs. 1.4%), underscoring a heavier comorbidity burden in the diabetes group (all p < 0.001). Mortality is also much higher among patients with diabetes: 22% died compared with 5.2% of those without diabetes, and diabetes is associated with higher rates of COPD, immunosuppression, intubation, and ICU admission, while asthma appears similar across groups (3.0% vs. 3.0%, p > 0.9). These descriptive results suggest that diabetes co-occurs with other severe chronic conditions and that patients with diabetes experience a more severe course of COVID-19, including higher death rates and more intensive interventions.
+
 ## Regression Analysis
 
 ```{r, regression, echo = FALSE, results = 'asis', include = TRUE}
@@ -38,8 +45,19 @@ tab_2 <- readRDS(
   )
 tab_2
 ```
+Table 2 reports adjusted odds ratios from a regression model for death, with diabetes, age, sex, and COVID-19 classification entered as predictors. After adjustment, diabetes remains strongly associated with mortality: patients with diabetes have 2.16 times the odds of death (95% CI: 2.07–2.25) compared with non-diabetic patients, holding other covariates constant. 
+
+Age shows a steep gradient, with an OR of 1.07 per additional year (95% CI: 1.07–1.07), implying that the odds of death roughly double over a 10-year age increase, and male patients have 81% higher odds of death than female patients (OR 1.81; 95% CI: 1.74–1.88). 
+
+Higher COVID-19 classification scores are also associated with increased mortality (OR 1.53; 95% CI: 1.51–1.55), consistent with more severe clinical presentation translating into higher risk of death. 
+
+Together, these adjusted findings indicate that diabetes independently predicts worse outcomes even after accounting for age, sex, and overall disease severity.
 
 ### Graphs
+
+The graphs provide visual summaries that align with the tabular results and help illustrate the magnitude of differences between groups. 
+
+The first plot presents a bar-style comparison of key outcomes or risk markers across diabetes status, making it easier to see that patients with diabetes experience higher mortality and greater use of critical care interventions than those without diabetes.  
 
 ```{r, graph, echo = FALSE, results = 'asis', include = TRUE}
 #| fig.align = "center",
@@ -50,6 +68,8 @@ knitr::include_graphics(
 
 ```
 
+The second plot depicts a continuous relationship—such as the distribution of age or predicted probability of death—across relevant subgroups, highlighting how risk increases with age and varies by diabetes status and other covariates.
+
 ```{r, graph2, echo = FALSE, results = 'asis', include = TRUE}
 #| fig.align = "center",
 #| out.width = "600px"
@@ -59,4 +79,4 @@ knitr::include_graphics(
 
 ```
 
-
+Taken together, these figures visually reinforce the core story from the descriptive and regression analyses: older age, male sex, more severe COVID-19 classification, and the presence of diabetes are all associated with substantially elevated risk of death in this cohort.

@@ -9,7 +9,7 @@ library(gtsummary)
 library(dplyr)
 
 # Create Bivariate Analysis Table using gtsummary
-tbl <- covid_data %>%
+tbl <- data %>%
   select(DIABETES, DEATH, SEX, AGE, PREGNANT, COPD, ASTHMA, INMSUPR, HIPERTENSION, CARDIOVASCULAR, RENAL_CHRONIC, OTHER_DISEASE, INTUBED, ICU) %>%
   tbl_summary(by = DIABETES, missing = "no", 
               label = list(
