@@ -29,4 +29,4 @@ output/scatterplot.png: code/04_make_scatter.R data/covid_data.rds
 
 .PHONY: clean
 clean:
-	rm output/* *.html
+	rm -f output/*.rds && rm -f output/*.png && rm -f cleandata/*rds && rm -f *.html && rm -f *.pdf

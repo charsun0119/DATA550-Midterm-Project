@@ -4,7 +4,7 @@ data <- readRDS(
   file = here::here("data/covid_data.rds")
 )
 
-head(covid_data)
+head(data)
 library(gtsummary)
 library(dplyr)
 
