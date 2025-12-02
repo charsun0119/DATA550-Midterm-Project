@@ -1,5 +1,8 @@
 #This is just a sample Makefile
 
+install:
+	R -e "install.packages('renv'); renv::restore(prompt = FALSE)"
+
 final_report.html: code/05_render_report.R final_report.Rmd \
 data/covid_data.rds \
 output/table_one.rds \
