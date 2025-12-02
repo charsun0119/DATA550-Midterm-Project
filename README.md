@@ -14,6 +14,7 @@ The data was provided by the Mexican government regarding covid-19 cases in Mexi
 
 ### Building the Project
 This project uses a Makefile to ensure that all analyses and outputs can be reproduced. To build the entire project (including tables, regression outputs, and the final report), run "make" in R terminal; to remove previously generated files, run "make clean".
+To set up the R package environment of the project, run "make install" in R terminal to restore all dependencies.
 
 ### Customization
 - We define a parameter in the YAML header that controls the echo option for all R code chunks. This allows us to render either a “default” report (code hidden) or a “test” report (code shown) without modifying the .Rmd file.
